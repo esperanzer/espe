@@ -1,0 +1,25 @@
+
+{% extends 'index.html'%}
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+  <title> {% block title %} Signout {% endblock %} </title>
+    </head>
+
+      <body>
+        {% block content %}
+        <div class="container">
+        </div>
+         <div class="jumbotron">
+          {% for Signout in object_list %}
+          
+            <p> {{ Signout : User_Name}} </p>
+            <p> {{  Signout : Password}} </p>
+           </div>
+            {% endblock %}
+
+    </body>
+   </html>

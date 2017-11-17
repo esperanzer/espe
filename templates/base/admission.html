@@ -1,0 +1,39 @@
+
+{% extends 'index.html'%}
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+	<title> {% block title %} Admission {% endblock %} </title>
+		</head>
+
+			<body>
+
+			<img src="{% static"img/doctor1.jpg" %}" alt="doctor1" />
+			h1> Welcome to Admission Blog... </h1>
+			{% block content %}
+
+			<div class="container">
+
+   		 <div class="jumbotron">
+
+		{% for Admission in object_list %}
+
+			<p> {{Admission : Admission_ID}} </p>
+			<p> {{Admission : Patient_ID =}} </p>
+			<p> {{Admission : Patient_Name}} </p>
+			<p> {{Admission : Treatment_ID }} </p>
+			<p> {{Admission : Ward_ID}} </p>
+			<p> {{Admission: Details}} </p>
+			<p> {{Admission: Date_Of_Admission}} </p>
+
+		</div>
+
+  	{% endblock%}
+
+    </body>
+   </html>
+
+   

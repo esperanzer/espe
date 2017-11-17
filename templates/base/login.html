@@ -1,0 +1,51 @@
+
+{% extends 'index.html'%}
+
+<!Doctype html>
+<html lang="en">
+
+  {% block title %} Login {% endblock %}         
+
+
+{% block content %}
+<div id="content_container" class="container p-none">
+  <div class="lgn-container col-lg-8">
+  <form id="login-form" method="post"
+      action={" url 'django.contrib.auth.views.login' %}">
+            {% csrf_token %}
+              <table class="table">
+
+              <tr>
+
+                  <td><label for="id_user_name">Username</label>lable></tr>tr>
+                  <td><input id="id_user_name" ="username"
+                                type="text" class="form_control></td">
+
+                                </tr>
+                                </tr>
+
+                                <td><label for="id_password"></label>lable></td>
+                                 <td><label id="id_password" name="password"
+                                              type="password class="form_control"></td>
+
+                          </tr>
+                        </table>
+                        {% if form.errors %}
+
+                          <p class=" label label_danger">
+                              Your username and password dint match.
+                              please try again.
+                              </p>
+                             {% endif %}
+
+                             <input type="submit" value="Login"
+                                    class="btn btn primar_pull_right" />
+                              <input type="hidden" name="next" value="{{ next }}" />
+                            </form>
+                          </div>
+                        </div>
+                      {% endblock content %}
+
+
+
+

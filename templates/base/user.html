@@ -1,0 +1,40 @@
+
+{% extends 'index.html'%}
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+  <title> {% block title %} User{% endblock %} </title>
+    </head>
+
+      <body>
+
+      <img src="{% static"img/doctor1.jpg" %}" alt="doctor1" />
+      h1> Welcome to User Blog... </h1>
+      {% block content %}
+
+      <div class="container">
+      </div>
+
+       <div class="jumbotron">
+
+    {% for User in object_list %}
+
+      <p> {{ User: User_ID}} </p>
+      <p> {{User: User_Name} </p>
+      <p> {{User:Password }}</p>
+      <p> {{User: Home_Address }} </p>
+      <p> {{UserUser:Contact_Number }} </p>
+      <p> {{tUser:Email }} </p>
+
+    </div>
+
+    {% endblock%}
+
+    </body>
+   </html>
+
+ 
+   

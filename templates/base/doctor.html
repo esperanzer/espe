@@ -1,0 +1,41 @@
+
+{% extends 'index.html' %}
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+  <title> {% block title %}Doctor {% endblock %} </title>
+    </head>
+
+      <body>
+
+      <img src="{% static "img/doctorv.jpg" %}" alt="doctor1" />
+           {% block content %}
+
+      <div class="container">
+      </div>
+
+       <div class="jumbotron">
+
+    {% for Doctor in object_list %}
+
+      <p> {{Doctor : Doctor_ID }} </p>
+      <p> {{ Doctor: Doctor_Name}} </p>
+      <p> {{ Doctor: Gender}} </p>
+      <p> {{ Doctor: Qualification}} </p>
+      <p> {{ Doctor: Department}} </p>
+      <p> {{ Doctor: Home_Address}} </p>
+      <p> {{ Doctor: Date_Of_Appointment}} </p>
+      <p> {{Doctor : Email}} </p>
+      <p> {{Doctor : Treatment_ID}} </p>
+      <p> {{Doctor : Contact}} </p>
+
+    </div>
+
+    {% endfor% }
+    {% endblock%}
+
+    </body>
+   </html>

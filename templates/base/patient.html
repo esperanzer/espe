@@ -1,0 +1,31 @@
+
+{% extends 'index.html' %}
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+  <title> {% block title %} Patient {% endblock %} </title>
+    <head>
+     <body>
+        <img src="{% static"img/lung.jpg" %}" alt="lung /">
+          {% block content %}
+            <div class="container">
+             </div>
+              <div class="jumbotron">
+              {% for Patient in object_list %}
+
+               <p> {{ Patient: Patient_ID }} </p>
+               <p> {Patient{ : Patient_Name}} </p>
+             <p> {{ Patient: Gender}} </p>
+          <p> {{ Patient: Home_Address}} </p>
+        <p> {{ Patient: Date_Of_Birth}} </p>
+      <p> {{Patient: Doctor_ID}} </p>
+      <p> {{Patient: Contact}} </p>
+        <p>{{Patient: Email}} </p>
+        </div>
+         {% endblock%}
+          </body>
+              </html>
+   
